@@ -6,7 +6,7 @@ import pytesseract
 from PIL import Image
 import re
 
-file = open('KARUTHRI_BHRAMARAMBA.pdf', 'rb')
+file = open('pdf_name.pdf', 'rb')
 readpdf = PyPDF2.PdfFileReader(file)
 count = readpdf.numPages
 print('Page Count ==>', count)
@@ -18,7 +18,7 @@ while a < count:
     file1.write("C:\\Users\\dgavi\\PycharmProjects\\realDataOCR\\image" + str(a) + ".jpg\n")
     a += 1
 
-images = convert_from_path('KARUTHRI_BHRAMARAMBA.pdf')
+images = convert_from_path('pdf_name.pdf')
 
 for i, image in enumerate(images):
     fname = "image" + str(i) + ".jpg"
