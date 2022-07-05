@@ -4,9 +4,10 @@ from pdf2image import convert_from_path
 import PyPDF2
 import pytesseract
 from PIL import Image
+from difflib import SequenceMatcher
 import re
 
-file = open('pdf_name.pdf', 'rb')
+file = open('anjali_rai.pdf', 'rb')
 readpdf = PyPDF2.PdfFileReader(file)
 count = readpdf.numPages
 print('Page Count ==>', count)
@@ -18,7 +19,7 @@ while a < count:
     file1.write("C:\\Users\\dgavi\\PycharmProjects\\realDataOCR\\image" + str(a) + ".jpg\n")
     a += 1
 
-images = convert_from_path('pdf_name.pdf')
+images = convert_from_path('anjali_rai.pdf')
 
 for i, image in enumerate(images):
     fname = "image" + str(i) + ".jpg"
@@ -81,14 +82,19 @@ with open('result_text.txt', 'w') as file:
         file.write(detail)
 
 # regex
-print("\nRegEx Batch No. Match Results -->")
+# print("\nRegEx Batch No. Match Results -->")
 # pattern = re.compile(r"\b(?=[^\W\d_]*\d)(?=\d*[^\W\d_])[^\W_]{6,9}\b")
 # pattern = '^[a-zA-Z0-9]{6,9}$'
 # pattern = re.compile('^\w+$')
 pattern = re.compile(r'\b(?=[a-zA-Z0-]*\d)[A-Za-z0-9-]{5,11}\b') # best results so far
+open('batch.txt', 'w').close()
 for i, line in enumerate(open('result_text.txt')):
     for match in re.finditer(pattern, line):
-        print(match.group())
+        with open('batch.txt', 'a') as file:
+            file.write(match.group())
+            file.write("\n")
+        # print(match.group())
 
 cv.waitKey(0)
 cv.destroyAllWindows()
+
