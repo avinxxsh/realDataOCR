@@ -49,7 +49,7 @@ pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesse
 img_1 = cv.cvtColor(im_bw, cv.COLOR_BGR2RGB)
 details = pytesseract.image_to_string('paths.txt')
 # details = pytesseract.image_to_string("paths.txt")
-print(details)
+# print(details)
 # print(pytesseract.image_to_boxes(img_1))
 
 # showing character detection
@@ -67,7 +67,7 @@ boxes = pytesseract.image_to_data(img_1)
 for x, b in enumerate(boxes.splitlines()):
     if x != 0:
         b = b.split()
-        print(b)
+        # print(b)
         if len(b) == 12:
             x, y, w, h = int(b[6]), int(b[7]), int(b[8]), int(b[9])
             cv.rectangle(img_1, (x, y), (w + x, h + y), (0, 0, 225), 3)
