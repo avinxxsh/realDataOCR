@@ -1,12 +1,1 @@
-C:\Users\dgavi\PycharmProjects\realDataOCR\image0.jpg
-C:\Users\dgavi\PycharmProjects\realDataOCR\image1.jpg
-C:\Users\dgavi\PycharmProjects\realDataOCR\image2.jpg
-C:\Users\dgavi\PycharmProjects\realDataOCR\image3.jpg
-C:\Users\dgavi\PycharmProjects\realDataOCR\image4.jpg
-C:\Users\dgavi\PycharmProjects\realDataOCR\image5.jpg
-C:\Users\dgavi\PycharmProjects\realDataOCR\image6.jpg
-C:\Users\dgavi\PycharmProjects\realDataOCR\image7.jpg
-C:\Users\dgavi\PycharmProjects\realDataOCR\image8.jpg
-C:\Users\dgavi\PycharmProjects\realDataOCR\image9.jpg
-C:\Users\dgavi\PycharmProjects\realDataOCR\image10.jpg
-C:\Users\dgavi\PycharmProjects\realDataOCR\image11.jpg
+
