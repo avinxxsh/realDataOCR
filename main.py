@@ -92,4 +92,3 @@ for i, line in enumerate(open('result_text.txt')):
 
 cv.waitKey(0)
 cv.destroyAllWindows()
-# r'\w+(?:-\w+)+'
